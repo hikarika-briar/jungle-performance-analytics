@@ -1,0 +1,28 @@
+import puppeteer from "puppeteer-core";
+import path from "node:path";
+const browser = await puppeteer.launch({ executablePath: "/usr/bin/google-chrome", headless: "new", args: ["--no-sandbox", "--allow-file-access-from-files"] });
+const page = await browser.newPage();
+await page.setViewport({ width: 1600, height: 1000 });
+const errors = [];
+page.on("pageerror", (e) => errors.push(e.message));
+await page.goto("file://" + path.resolve("/home/claude/jpa/dist/local.html"), { waitUntil: "load" });
+await page.waitForSelector(".kpi");
+await page.evaluate(() => { location.hash = "importacao"; });
+await new Promise((r) => setTimeout(r, 400));
+const t0 = Date.now();
+await (await page.$("#imp-file")).uploadFile(process.argv[2]);
+await page.waitForFunction(() => document.querySelector(".callout.good"), { timeout: 60000 });
+const secs = ((Date.now() - t0) / 1000).toFixed(1);
+const size = await page.evaluate(async () => {
+  const req = indexedDB.open("jungle-performance-analytics", 1);
+  const db = await new Promise((r) => { req.onsuccess = () => r(req.result); });
+  const v = await new Promise((r) => { const g = db.transaction("kv").objectStore("kv").get("dataset"); g.onsuccess = () => r(g.result); });
+  const ic = v.dataset.meta.icons;
+  return { totalMB: (JSON.stringify(v.dataset).length / 1e6).toFixed(1), iconsMB: (JSON.stringify(ic).length / 1e6).toFixed(2), webp: Object.values(ic.item).filter((u) => u.startsWith("data:image/webp")).length, items: Object.keys(ic.item).length };
+});
+await page.evaluate(() => { location.hash = "builds"; });
+await new Promise((r) => setTimeout(r, 800));
+const comp = await page.evaluate(() => [...document.querySelectorAll(".bc-side")].map((s) => s.querySelector(".sample")?.textContent + " · " + s.querySelector(".bignum")?.textContent));
+await page.screenshot({ path: process.argv[3] });
+console.log(JSON.stringify({ importSecs: secs, size, comp, errors }, null, 1));
+await browser.close();

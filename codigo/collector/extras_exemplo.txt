@@ -1,0 +1,7 @@
+# IDs de partidas para baixar com:  python coletor_riot.py --ids extras_exemplo.txt
+# Um ID por linha. Pode ser BR1_1234567890 ou só o número (o BR1_ é adicionado).
+# Linhas que começam com # são ignoradas. Útil para as partidas de fev-mar/2026
+# encontradas no histórico de outros jogadores.
+#
+# BR1_3012345678
+# 3012345679

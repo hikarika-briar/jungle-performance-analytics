@@ -1,0 +1,92 @@
+{
+ "goals": [
+  {
+   "key": "redeaths",
+   "target": 0.71
+  },
+  {
+   "key": "deaths",
+   "target": 4.7
+  },
+  {
+   "key": "lossSignals",
+   "target": 0.22
+  }
+ ],
+ "rankManual": [
+  {
+   "lp": 14,
+   "note": "fim da temporada 2025 (print do OP.GG)",
+   "rank": "I",
+   "t": 1767614400000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 50,
+   "rank": "IV",
+   "t": 1772290800000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 15,
+   "rank": "I",
+   "t": 1774710000000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 9,
+   "rank": "I",
+   "t": 1777388400000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 1,
+   "rank": "I",
+   "t": 1779980400000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 57,
+   "rank": "IV",
+   "t": 1782658800000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 0,
+   "rank": "IV",
+   "t": 1785250800000,
+   "tier": "DIAMOND"
+  },
+  {
+   "lp": 92,
+   "rank": "I",
+   "t": 1787929200000,
+   "tier": "EMERALD"
+  },
+  {
+   "lp": 50,
+   "rank": "I",
+   "t": 1790607600000,
+   "tier": "EMERALD"
+  },
+  {
+   "lp": 61,
+   "rank": "I",
+   "t": 1793199600000,
+   "tier": "EMERALD"
+  },
+  {
+   "lp": 3,
+   "note": "print do OP.GG de 03/11",
+   "rank": "I",
+   "t": 1793676600000,
+   "tier": "EMERALD"
+  }
+ ],
+ "banner": {
+  "src": "fundo.webp",
+  "x": 49,
+  "y": 12,
+  "zoom": 100
+ }
+}
