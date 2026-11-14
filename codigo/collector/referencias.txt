@@ -1,0 +1,15 @@
+# Jogadores de referência para a aba "Rumo ao Challenger".
+# Um Riot ID por linha, no formato Nome#TAG (igual aparece no OP.GG).
+# Linhas que começam com # são ignoradas. Pode adicionar ou tirar nomes à vontade.
+# Se algum der "não encontrado", copie o Riot ID exato do perfil dele no OP.GG.
+
+BetterJunglerWin#W33
+gurincrivel#br1
+Drakehero#BR07
+guga fighter#001
+Tapioka French#br1
+Kohls#peace
+hunters dream#ｃｈｉｌｌ
+Vinicete#vini7
+TTVNehemmiahlol#Stoic
+juny#misa
