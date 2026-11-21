@@ -1,0 +1,12 @@
+# Os melhores mono Briar do mundo (página "Mono Briar" do dashboard).
+# Um jogador por linha: Nome#TAG | SERVIDOR   (BR, NA, EUW, EUNE, KR, JP, LAN, LAS, OCE, TR, RU)
+IbraBriar#Rapha | BR
+ASTA LA VISTA BB#NA1 | NA
+GRILLR#NA1 | NA
+metal briar#crona | BR
+641#001 | EUW
+계곡산개구리#2004 | KR
+하루가 힘들어#구해줘 | KR
+BlindWolf#BRIAR | BR
+ozen a imóvel#maka | BR
+m i l l s k i#x99 | EUW
