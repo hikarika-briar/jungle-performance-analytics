@@ -1,0 +1,10 @@
+import puppeteer from "puppeteer-core";
+import path from "node:path";
+const browser = await puppeteer.launch({ executablePath: "/usr/bin/google-chrome", headless: "new", args: ["--no-sandbox", "--allow-file-access-from-files"] });
+const page = await browser.newPage();
+await page.setViewport({ width: 400, height: 900 });
+await page.goto("file://" + path.resolve("dist/local.html") + "#" + process.argv[2], { waitUntil: "load" });
+await new Promise((r) => setTimeout(r, 3500));
+const r = await page.evaluate(() => [...document.querySelectorAll("body *")].filter((e) => e.getBoundingClientRect().right > 402 && !e.closest(".tablewrap") && !e.closest(".nav")).slice(0, 12).map((e) => `${e.tagName}.${String(e.className).slice(0, 40)} r=${Math.round(e.getBoundingClientRect().right)} ${e.innerText?.slice(0, 40).replace(/\n/g, " ")}`));
+console.log(r.join("\n"));
+await browser.close();
